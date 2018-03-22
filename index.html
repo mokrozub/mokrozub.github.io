@@ -4,15 +4,35 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>mokrozub.com</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+        <style>
+            body {
+                margin: 0 15px;
+            }
+
+            .i-center {
+                text-align: center;
+            }
+        </style>
         <script>
             function init() {
-                document.getElementById('content').innerHTML = navigator.userAgent;
+                document.querySelector('.js-content').innerHTML = window.navigator.userAgent;
+                document.querySelector('.js-date').innerHTML = (new Date()).toString();
             }
 
             document.addEventListener('DOMContentLoaded', init);
         </script>
     </head>
     <body>
-        <div id="content"></div>
+        <div>
+            <h1 class="i-center">mokrozub.com</h1>
+        </div>
+        <div>
+            <p class="js-content"></p>
+        </div>
+        <div>
+            <p class="js-date"></p>
+        </div>
     </body>
 </html>
