@@ -20,6 +20,7 @@
             function init() {
                 document.querySelector('.js-content').innerHTML = window.navigator.userAgent;
                 document.querySelector('.js-date').innerHTML = (new Date()).toString();
+                document.querySelector('.js-params').innerHTML = 'width=' + window.innerWidth + ' height=' + window.innerHeight;
             }
 
             document.addEventListener('DOMContentLoaded', init);
@@ -34,6 +35,9 @@
         </div>
         <div>
             <p class="js-date"></p>
+        </div>
+        <div>
+            <p class="js-params"></p>
         </div>
     </body>
 </html>
